@@ -1,0 +1,92 @@
+@import 'src/mixins/index';
+
+.landing {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(5px + 2vmin);
+    color: black;
+}
+
+.landing-section {
+    height: 100vh;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;    
+    overflow-x: hidden;
+    
+    @include medium {
+        display: flex;
+    }
+
+    @include large {
+        
+    }
+    
+}
+
+.landing-section-image-only {
+    display: block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 4px;    
+    overflow-x: hidden;
+    
+    @include medium {
+        display: flex;
+    }
+
+    @include large {
+        
+    }
+    
+}
+
+
+
+.landing-box {
+    width: 40%;
+    margin: 50px;
+    margin-left: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    @include medium {
+    
+    }
+
+    @include large {
+   
+    }
+}
+
+.landing-main-image {
+    max-width:100%;
+    height: auto;
+    
+    @include medium {
+        
+        
+    }
+
+    @include large {
+        
+        
+    }
+}
+
+.landing-main-text {
+    text-align: center;
+
+    @include medium {
+        margin: 0 20px;
+        
+    }
+
+    @include large {
+        margin: 0 40px;
+    }
+}

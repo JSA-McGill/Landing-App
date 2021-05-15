@@ -1,0 +1,77 @@
+// All
+.navbar {
+    width: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    font-size: calc(1px + 2vmin);
+    font-family: Raleway, sans-serif;
+    position: fixed;
+    color: white;
+    z-index: 1;
+    transition: top 0.3s;
+
+}
+
+.navbar_appbar_logo {
+    height: 40px;
+    width: 40px;
+}
+
+.navbar_appbar_container_logo {
+    text-align: left;
+    flex: 1;
+    margin: 4px;
+}
+
+
+// Small
+.navbar_appbar {
+    display: flex;
+
+    &--on {
+        transform: translateY(100vh);
+        transition: transform 400ms ease-out;
+    }
+
+    &--off {
+        transform: translateY(0);
+        transition: transform 400ms ease-in;
+
+    }
+}
+
+.navbar_appbar_menubar {
+    display: flex;
+}
+
+.navbar_appbar_tabs {
+    opacity: 0;
+}
+
+
+// medium + Large
+.navbar_appbar_tabs {
+    text-align: right;
+}
+
+.navbar_appbar_tabs_container {
+    display: flex;
+}
+
+.nav_bar_tabs_divider {
+    flex: 1;
+}
+
+.navbar_tab {
+    font-size:15px;
+
+  &--on {
+      
+  }  
+}
+
+.navbar_appbar_tabs_icon {
+    width: 10px;
+}

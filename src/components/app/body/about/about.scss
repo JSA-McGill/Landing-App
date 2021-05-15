@@ -1,0 +1,44 @@
+@import 'src/mixins/index';
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    color: black;
+    background-color: white;
+    overflow-y: hidden;
+    padding: 0 25px;
+    margin-bottom: 2vmin;
+    
+    @include medium {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        justify-content: left;
+        font-size: calc(10px + 2vmin);
+        padding: 0 30px;
+        color: black;
+        background-color: white;
+    }
+
+    @include large {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: calc(10px + 2vmin);
+        color: black;
+        padding: 0 50px;
+        background-color: white;
+    }
+}
+
+.content{
+    text-align: left;
+    font-size: large;
+}
+
+.execs{
+    overflow-x: hidden;
+}
