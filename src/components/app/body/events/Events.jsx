@@ -10,7 +10,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Slide from '@material-ui/core/Slide';
 import Fade from '@material-ui/core/Fade';
-import events from "../../../../assets/events/events.js"
+import events from "../../../../assets/events/events.js";
 import { CardActionArea } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         alignItems: "center",
         justifyContent: "center",
         fontSize: "calc(10px + 2vmin)",
+        marginBottom: "20px",
         color: "black"
     },
     image: {

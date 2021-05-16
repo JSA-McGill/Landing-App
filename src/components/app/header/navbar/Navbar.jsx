@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {
     Link
@@ -35,7 +35,26 @@ export default function Navbar(props) {
     // "Blog": "/blog",
     "Get Involved": "/getinvolved"
     
-};
+    };
+
+    useEffect( () => {
+        switch (window.location.pathname) {
+            case "/":
+                setValue(0);
+                break;
+            case "/about":
+                setValue(1);
+                break;
+            case "/events":
+                setValue(2);
+                break;
+            case "/getinvolved":
+                setValue(3);
+                break;
+            default:
+                
+        }
+    });
 
     // Tabs
     const { classes } = props;
@@ -120,12 +139,19 @@ export default function Navbar(props) {
                             textColor="secondary"
                             value={value}
                             onChange={handleChange}
+                            TabIndicatorProps={value == 0 ? {   
+                                style: {
+                                    display: "none",
+                                },
+                            } : {}}
                         >   
+                            <Tab disabled component={Link} indicator={{color:'transparent', backgroundColor: 'transparent'}}/>
                             <Tab  disableRipple label={handleFontChange(value === 1, "About")} component={Link} to="/about"/>
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
                             {/* <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
                             <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */}
-                            <Tab  disableRipple label={handleFontChange(value === 5, "Get Involved")} component={Link} to="/getinvolved"/>
+                            <Tab  disableRipple label={handleFontChange(value === 3, "Get Involved")} component={Link} to="/getinvolved"/>
+                            {/* CHANGE TO 5 later */}
                         </Tabs>
                     </div>
                 )}
