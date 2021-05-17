@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Events() {
     const classes = useStyles();
+    
 
     const createEvent = (title, description, image, link) => {
         return (
@@ -68,6 +69,70 @@ export default function Events() {
         )
     }
 
+    const CreateUpcomingEvents = () => {
+        return ((events.upcoming.length === undefined || events.upcoming.length === 0) 
+        ?
+            (
+                <Grid container justify="center"  direction="row" spacing="4">
+                    <Grid item>
+                        <Card raised="true" className="">
+                                <div className="">
+                                    <CardContent>
+                                        <Typography component="h5" variant="h5">
+                                            There are no upcoming events planned
+                                        </Typography>
+                                    </CardContent>
+                                </div>
+                        </Card>
+                    </Grid>
+                </Grid>
+            )
+            :
+            (
+                <Grid container justify="center"  direction="row" spacing="4">
+                    {events.upcoming.map((event, index) => (
+                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                    ))
+                    }
+                </Grid>
+            )
+            )
+    }
+
+    const CreatePastEvents = () => {
+        return ((events.past.length === undefined || events.past.length === 0) 
+        ?
+            (
+                <Grid container justify="center"  direction="row" spacing="4">
+                    <Grid item>
+                        <Card raised="true" className="">
+                                <CardMedia
+                                    classes={{root: classes.image}}
+                                    image=""
+                                />
+                                <div className="">
+                                    <CardContent>
+                                        <Typography component="h5" variant="h5">
+                                            There are no pasts events listed
+                                        </Typography>
+                                    </CardContent>
+                                </div>
+                        </Card>
+                    </Grid>
+                </Grid>
+            )
+            :
+            (
+                <Grid container justify="center"  direction="row" spacing="4">
+                    {events.past.map((event, index) => (
+                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                    ))
+                    }
+                </Grid>
+            )
+            )
+    }
+
     return (
             <div className={ classes.root}>
                 <Slide direction="left" timeout={300} in={true}  >
@@ -76,11 +141,9 @@ export default function Events() {
                     </h2>
                 </Slide> 
                 <Slide direction="left" timeout={500} in={true} >
-                    <Grid container justify="center"  direction="row" spacing="4">
-                        {events.upcoming.map((event, index) => (
-                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                        ))}
-                    </Grid>
+                    {
+                        CreateUpcomingEvents()
+                    }   
                 </Slide>
                 <Slide direction="left" timeout={300} in={true}  >
                     <h2>
@@ -88,11 +151,9 @@ export default function Events() {
                     </h2>
                 </Slide>
                 <Slide direction="left" timeout={500} in={true} >
-                <Grid container justify="center" direction="row" spacing="4">
-                    {events.past.map((event, index) => (
-                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                        ))}
-                    </Grid>
+                    {
+                        CreatePastEvents()
+                    }
                 </Slide>
             </div>
         
