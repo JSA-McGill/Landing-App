@@ -42,7 +42,6 @@ export default function Events() {
                 <Grid item>
                     <Card raised="true" className="">
                         <CardActionArea onClick={() => {
-                                console.log("WADDUP");
                                 window.location.href = link;
                             }
                             } >
@@ -73,28 +72,30 @@ export default function Events() {
         return ((events.upcoming.length === undefined || events.upcoming.length === 0) 
         ?
             (
-                <Grid container justify="center"  direction="row" spacing="4">
-                    <Grid item>
-                        <Card raised="true" className="">
-                                <div className="">
-                                    <CardContent>
-                                        <Typography component="h5" variant="h5">
-                                            There are no upcoming events planned
-                                        </Typography>
-                                    </CardContent>
-                                </div>
-                        </Card>
+                <Fade in={true} timeout={1000}>
+                    <Grid container justify="center"  direction="row" spacing="4">
+                        <Grid item>
+                            <div className="">
+                                <CardContent>
+                                    <Typography component="h5" variant="h5">
+                                        There are no upcoming events planned
+                                    </Typography>
+                                </CardContent>
+                            </div>
+                        </Grid>
                     </Grid>
-                </Grid>
+                </Fade>
             )
             :
             (
-                <Grid container justify="center"  direction="row" spacing="4">
-                    {events.upcoming.map((event, index) => (
-                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                    ))
-                    }
-                </Grid>
+                <Slide direction="left" timeout={500} in={true} >
+                    <Grid container justify="center"  direction="row" spacing="4">
+                        {events.upcoming.map((event, index) => (
+                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                        ))
+                        }
+                    </Grid>
+                </Slide>
             )
             )
     }
@@ -105,30 +106,26 @@ export default function Events() {
             (
                 <Grid container justify="center"  direction="row" spacing="4">
                     <Grid item>
-                        <Card raised="true" className="">
-                                <CardMedia
-                                    classes={{root: classes.image}}
-                                    image=""
-                                />
-                                <div className="">
-                                    <CardContent>
-                                        <Typography component="h5" variant="h5">
-                                            There are no pasts events listed
-                                        </Typography>
-                                    </CardContent>
-                                </div>
-                        </Card>
+                        <div className="">
+                            <CardContent>
+                                <Typography component="h5" variant="h5">
+                                    There are no pasts events listed
+                                </Typography>
+                            </CardContent>
+                        </div>
                     </Grid>
                 </Grid>
             )
             :
             (
-                <Grid container justify="center"  direction="row" spacing="4">
-                    {events.past.map((event, index) => (
-                        createEvent(event.Title, event.Description, event.Image, event.Facebook)
-                    ))
-                    }
-                </Grid>
+                <Slide direction="left" timeout={500} in={true} >
+                    <Grid container justify="center"  direction="row" spacing="4">
+                        {events.past.map((event, index) => (
+                            createEvent(event.Title, event.Description, event.Image, event.Facebook)
+                        ))
+                        }
+                    </Grid>
+                </Slide>
             )
             )
     }
@@ -140,21 +137,17 @@ export default function Events() {
                         Upcoming Events
                     </h2>
                 </Slide> 
-                <Slide direction="left" timeout={500} in={true} >
-                    {
-                        CreateUpcomingEvents()
-                    }   
-                </Slide>
+                {
+                    CreateUpcomingEvents()
+                }   
                 <Slide direction="left" timeout={300} in={true}  >
                     <h2>
                         Past Events
                     </h2>
                 </Slide>
-                <Slide direction="left" timeout={500} in={true} >
-                    {
-                        CreatePastEvents()
-                    }
-                </Slide>
+                {
+                    CreatePastEvents()
+                }
             </div>
         
     );
