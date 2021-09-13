@@ -58,7 +58,4 @@ export default function App () {
 
 App.theme = theme;
 
-App.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
 

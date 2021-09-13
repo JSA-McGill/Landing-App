@@ -1,18 +1,13 @@
 import React, { useState } from "react";
-import PropTypes from 'prop-types';
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
 import Icon from '@material-ui/core/Icon';
-import Collapse from '@material-ui/core/Collapse';
 
 import Doge from "../../../../../assets/svg/doge.svg";
 import Neko from "../../../../../assets/svg/neko.svg";
@@ -106,14 +101,18 @@ export default function Exec(props) {
                                         {props.Pet}
                                     </Typography>
                                     
-                                    <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
-                                        <Icon classes={{root : classes.textObject}}>
-                                            <InstagramIcon/>
-                                        </Icon>
-                                        <span classes={classes.textObject}>
-                                            {props.Instagram}
-                                        </span>
-                                    </Typography>
+                                    { props.Instagram ?
+                                        <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
+                                            <Icon classes={{root : classes.textObject}}>
+                                                <InstagramIcon/>
+                                            </Icon>
+                                            <span classes={classes.textObject}>
+                                                {props.Instagram}
+                                            </span>
+                                        </Typography> 
+                                        :
+                                       <></>
+                                    }
                                 </>
                             }
                     </CardContent>

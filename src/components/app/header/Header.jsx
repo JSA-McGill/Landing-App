@@ -5,6 +5,7 @@ import Navbar from "./navbar/Navbar.jsx"
 import "./header.scss"
 
 const Header = (props) => {  
+
   return (
         <div>
            <header className ="header">
@@ -13,9 +14,5 @@ const Header = (props) => {
         </div>  
       );
 }
-
-Header.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
 
 export default Header

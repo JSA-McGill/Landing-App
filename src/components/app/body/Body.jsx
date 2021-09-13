@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
     Switch,
     Route,
@@ -47,7 +46,3 @@ export default function Body (){
         </div>
     );
 }
-
-Body.propTypes = {
-    classes: PropTypes.object.isRequired,
-};

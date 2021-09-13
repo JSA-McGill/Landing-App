@@ -55,7 +55,7 @@ export default function GetInvolved(){
             <div className={classes.content}>
                 <div className={classes.getinvolved}>
                     <h1> Get Involved </h1> 
-                    <p> JSA McGill is always looking for participants and volunteers for our local cultural, educational, and business events! If you're interested you can find a list of our events <a href="https://www.facebook.com/pg/jsa.mcgill/events/?ref=page_internal" target="_blank"> here </a>!</p>
+                    <p> JSA McGill is always looking for participants and volunteers for our local cultural, educational, and business events! If you're interested you can find a list of our events <a href="https://www.facebook.com/pg/jsa.mcgill/events/?ref=page_internal" rel="noopener noreferrer" target="_blank"> here </a>!</p>
                 </div>
                 <div>
                     <h1>Reach Out to Us!</h1>
@@ -83,12 +83,12 @@ export default function GetInvolved(){
                 <div>
                     
                     <IconButton color="primary">
-                        <a href="https://www.facebook.com/jsa.mcgill" target="_blank">
+                        <a href="https://www.facebook.com/jsa.mcgill" rel="noopener noreferrer" target="_blank">
                             <FacebookIcon />
                         </a>
                     </IconButton>
                     <IconButton color="primary">
-                        <a href="https://www.instagram.com/jsamcgill/?hl=en" target="_blank">
+                        <a href="https://www.instagram.com/jsamcgill/?hl=en" rel="noopener noreferrer" target="_blank">
                             <InstagramIcon />
                         </a>
                     </IconButton>

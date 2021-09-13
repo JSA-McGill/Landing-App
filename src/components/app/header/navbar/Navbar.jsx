@@ -10,8 +10,6 @@ import { useMedia } from 'react-media';
 import logo from "../../../../assets/images/logo512.png";
 
 import MenuIcon from '@material-ui/icons/Menu';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import InstagramIcon from '@material-ui/icons/Instagram';
 import IconButton from '@material-ui/core/IconButton';
 
 import AppBar from '@material-ui/core/AppBar';
@@ -28,16 +26,18 @@ import "./navbar.scss"
 export default function Navbar(props) {
 
     const links = {
-        "Home": "/", 
+    "Home": "/", 
     "About":"/about", 
     "Events": "/events",
     // "Resources": "/resources",
     // "Blog": "/blog",
     "Get Involved": "/getinvolved"
-    
     };
 
-    useEffect( () => {
+    // Tabs
+    const [value, setValue] = useState(0);
+
+    useEffect(() => {
         switch (window.location.pathname) {
             case "/":
                 setValue(0);
@@ -52,13 +52,9 @@ export default function Navbar(props) {
                 setValue(3);
                 break;
             default:
-                
+               setValue(0); 
         }
     });
-
-    // Tabs
-    const { classes } = props;
-    const [value, setValue] = React.useState(0);
 
     const handleChange = (event, value) => {
         setValue(value);
@@ -93,7 +89,7 @@ export default function Navbar(props) {
 
     return (
         <div className="navbar">
-            <AppBar className="navbar_appbar" elevation={0} color="white">
+            <AppBar className="navbar_appbar" elevation={0} color="inherit">
                 {showList ? (
                     <div>
                         <div className="navbar_appbar_menubar">
@@ -111,13 +107,17 @@ export default function Navbar(props) {
                                 onKeyDown={toggleDrawer(false)}
                             >
                                 <List>
-                                    { Object.entries(links).map(([k, v], link) => (
+                                    { Object.entries(links).map(([k, v], link) => {
+                                        console.log(k);
+                                        console.log(v);
+                                        return (
                                         <ListItem disableRipple button key={k}>
                                              <Link to={v}>
                                                 <ListItemText primary={k}/>
                                             </Link>
                                         </ListItem>
-                                    ))}
+                                        );
+                                        })}
                                 </List>
                                 </div>
                         </Drawer>
@@ -132,21 +132,24 @@ export default function Navbar(props) {
                         </Link>
                         <div className="nav_bar_tabs_divider"> </div>
                         <Tabs
-                            classes="navbar_appbar_tabs"
+                            classes={ value === 0 ? 
+                                {root: "navbar_appbar_tabs"} 
+                            : {}}
                             variant="scrollable"
                             scrollButtons="auto"
                             indicatorColor="primary"
                             textColor="secondary"
                             value={value}
                             onChange={handleChange}
-                            TabIndicatorProps={value == 0 ? {   
+                            TabIndicatorProps={value === 0 ? {   
                                 style: {
                                     display: "none",
                                 },
-                            } : {}}
+                            } : {style: {}}
+                            }
                         >   
-                            <Tab disabled component={Link} indicator={{color:'transparent', backgroundColor: 'transparent'}}/>
-                            <Tab  disableRipple label={handleFontChange(value === 1, "About")} component={Link} to="/about"/>
+                            <Tab disabled indicator={{color:'transparent', backgroundColor: 'transparent'}} />
+                            <Tab  disableRipple label={handleFontChange(value === 1, "About")}  to="/about" component={Link}/>
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
                             {/* <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
                             <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */}
@@ -159,10 +162,3 @@ export default function Navbar(props) {
         </div>
     );
 };
-
-
-Navbar.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-
