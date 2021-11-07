@@ -1,13 +1,21 @@
 import jmusic from "../images/j-music.jpg";
 import japanese101 from "../images/japanese_101.jpg";
 import supersmash_tourny_cover from "../images/smash_tourny_cover.png";
+import japanese101_2021 from "../images/Events/Japanese_101.jpg";
 
 
 const events = {
     upcoming: [
-        
+        {
+            "id": 1,
+                "Image": japanese101_2021,
+                "Title": "Japanese 101",
+                "Description": "Learn Japanese",
+                "Facebook": "https://www.facebook.com/events/438732114269694"
+        },
     ],
     past: [
+        
         {
             "id": 1,
                 "Image": jmusic,
