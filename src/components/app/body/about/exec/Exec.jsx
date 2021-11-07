@@ -13,6 +13,7 @@ import Doge from "../../../../../assets/svg/doge.svg";
 import Neko from "../../../../../assets/svg/neko.svg";
 import Shiba from "../../../../../assets/svg/shiba.svg";
 import InstagramIcon from '@material-ui/icons/Instagram';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -90,20 +91,33 @@ export default function Exec(props) {
                                 :
                                 <>
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h5" style={{fontStyle:"italic"}}>
-                                        {props.Program}
+                                        {"Program : " + props.Program}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3" style={{fontStyle:"italic"}}>
-                                        {props.Year}
+                                        {"Year : " + props.Year}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {props.FavoriteFood}
+                                        {"Time in Japan : " + props.TimeSpentInJapan}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {props.Pet}
+                                        {"Favorite..."}
                                     </Typography>
+
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {"Food : " + props.FavoriteFood}
+                                    </Typography>
+
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {"Pet : " + props.Pet}
+                                    </Typography>
+
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
+                                        {"Part about Japan : " + props.FavoritePartAboutJapan}
+                                    </Typography>
+
                                     
                                     { props.Instagram ?
                                         <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
@@ -112,6 +126,18 @@ export default function Exec(props) {
                                             </Icon>
                                             <span classes={classes.textObject}>
                                                 {props.Instagram}
+                                            </span>
+                                        </Typography> 
+                                        :
+                                       <></>
+                                    }
+                                    { props.LinkedIn ?
+                                        <Typography classes={{root: classes.flexObject}} gutterBottom display="inline" component="div">
+                                            <Icon classes={{root : classes.textObject}}>
+                                                <LinkedInIcon/>
+                                            </Icon>
+                                            <span classes={classes.textObject}>
+                                                {props.LinkedIn}
                                             </span>
                                         </Typography> 
                                         :
