@@ -25,7 +25,8 @@ const execs = {
             "FirstName": "Sachie",
             "LastName": "Arashida",
             "Title": "President",
-            "Program": "Economics & Sociology U3",
+            "Program": "Economics & Sociology",
+            "Year": "U3",
             "FavoriteFood" : "Karaage",
             "Pet": "Dog",
             "Instagram": "@a.sachiramen"
@@ -36,7 +37,8 @@ const execs = {
             "FirstName": "Aki",
             "LastName": "Fujinawa",
             "Title": "VP Culture",
-            "Program": "Mechanical Engineering U3",
+            "Program": "Mechanical Engineering",
+            "Year": "U3",
             "FavoriteFood" : "あん肝",
             "Pet": "Dog",
             "Instagram": "@akiii0623"
@@ -54,7 +56,8 @@ const execs = {
             "FirstName": "Cherry",
             "LastName": "Lei",
             "Title": "Photographer",
-            "Program": "History U3",
+            "Program": "History",
+            "Year": "U3",
             "FavoriteFood" : "Chazuke & Onigiri",
             "Pet": "Dog",
             "Instagram": "@chierii_chan"
@@ -65,7 +68,8 @@ const execs = {
             "FirstName": "Christy",
             "LastName": "Shao",
             "Title": "Video Editor",
-            "Program": "Cognitive Science U3",
+            "Program": "Cognitive Science",
+            "Year": "U3",
             "FavoriteFood" : "Japanese Eel, Pork Cutlet",
             "Pet": "Cat",
             "Instagram": "@Christy._.z"
@@ -75,7 +79,8 @@ const execs = {
             "FirstName": "Damla",
             "LastName": "Kuralay",
             "Title": "Culture",
-            "Program": "Linguistics U2",
+            "Program": "Linguistics",
+            "Year": "U2",
             "FavoriteFood" : "Takoyaki",
             "Pet": "Dog",
             "Instagram": "@damlakuralay"
@@ -85,7 +90,8 @@ const execs = {
             "FirstName": "Erika",
             "LastName": "Inukai",
             "Title": "Media & Culture",
-            "Program": "Environmental Biology U2",
+            "Program": "Environmental Biology",
+            "Year": "U2",
             "FavoriteFood": "Seaweed & Natto",
             "Pet": "Dog",
             "Instagram": "@erikai_juc"
@@ -95,7 +101,8 @@ const execs = {
             "FirstName": "Kevin",
             "LastName": "Pan",
             "Title": "Culture",
-            "Program": "U3 Pharmacology",
+            "Program": "Pharmacology",
+            "Year": "U3",
             "FavoriteFood": "Ramen",
             "Pet": "Cat",
             "Instagram": "@kevinpan862"
@@ -106,7 +113,8 @@ const execs = {
             "FirstName": "Mayumi",
             "LastName": "Moore",
             "Title": "VP Culture",
-            "Program": "Nutrition U2",
+            "Program": "Nutrition",
+            "Year": "U2",
             "FavoriteFood" : "Natto",
             "Pet": "Dog",
             "Instagram": "@amandyyumi"
@@ -117,7 +125,8 @@ const execs = {
             "FirstName": "Megumi",
             "LastName": "Ohara",
             "Title": "External",
-            "Program": "Political Science U1",
+            "Program": "Political Science",
+            "Year": "U1",
             "FavoriteFood" : "Kaisendon",
             "Pet": "Cat",
             "Instagram": "@megumi.o"
@@ -135,10 +144,11 @@ const execs = {
             "FirstName": "Philip",
             "LastName": "Tam",
             "Title": "Webmaster",
-            "Program": "Computer Science U3",
+            "Program": "Computer Science",
+            "Year": "U3",
             "FavoriteFood": "Gyudon",
             "Pet": "Dog",
-            "Instagram": "tyd_pt"
+            "Instagram": "flepal"
         },
         {
             "id": 13,
@@ -153,7 +163,8 @@ const execs = {
             "FirstName": "Rie",
             "LastName": "Saute",
             "Title": "Culture",
-            "Program": "Sociology U1",
+            "Program": "Sociology",
+            "Year": "U1",
             "FavoriteFood" : "Katsudon & Mochi",
             "Pet": "Dog",
             "Instagram": "@rie.c.s"
@@ -164,7 +175,8 @@ const execs = {
             "FirstName": "Sally",
             "LastName": "Nakazawa",
             "Title": "First Year Rep.",
-            "Program": "Cognitive Science, U1",
+            "Program": "Cognitive Science",
+            "Year": "U1",
             "FavoriteFood" : "Sashimi & Yakiniku",
             "Pet": "Cat",
             "Instagram": "@sallyyy.n"
@@ -175,7 +187,8 @@ const execs = {
             "FirstName": "Shodai",
             "LastName": "Inose",
             "Title": "VP Finance",
-            "Program": "Statistics U3",
+            "Program": "Statistics",
+            "Year": "U3",
             "FavoriteFood" : "Sushi & マカロニグラタン",
             "Pet": "Dog",
         },
@@ -185,7 +198,8 @@ const execs = {
             "FirstName": "Yumika",
             "LastName": "Shiba",
             "Title": "VP External",
-            "Program": "Computer Science & Biology U2",
+            "Program": "Computer Science & Biology",
+            "Year": "U2",
             "FavoriteFood" : "Sushi",
             "Pet": "Dog",
         },
@@ -195,7 +209,8 @@ const execs = {
             "FirstName": "Zoe",
             "LastName": "Countess",
             "Title": "VP Media",
-            "Program": "Linguistic U4",
+            "Program": "Linguistic",
+            "Year": "U4",
             "FavoriteFood" : "Mochi",
             "Pet": "Dog",
             "Instagram": "@zduch"

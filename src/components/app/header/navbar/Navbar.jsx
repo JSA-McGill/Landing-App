@@ -29,7 +29,7 @@ export default function Navbar(props) {
     "Home": "/", 
     "About":"/about", 
     "Events": "/events",
-    // "Resources": "/resources",
+    "Resources": "/resources",
     // "Blog": "/blog",
     "Get Involved": "/getinvolved"
     };
@@ -48,8 +48,11 @@ export default function Navbar(props) {
             case "/events":
                 setValue(2);
                 break;
-            case "/getinvolved":
+            case "/resources":
                 setValue(3);
+                break;
+            case "/getinvolved":
+                setValue(4);
                 break;
             default:
                setValue(0); 
@@ -151,9 +154,9 @@ export default function Navbar(props) {
                             <Tab disabled indicator={{color:'transparent', backgroundColor: 'transparent'}} />
                             <Tab  disableRipple label={handleFontChange(value === 1, "About")}  to="/about" component={Link}/>
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
-                            {/* <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
-                            <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */}
-                            <Tab  disableRipple label={handleFontChange(value === 3, "Get Involved")} component={Link} to="/getinvolved"/>
+                            <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
+                            <Tab  disableRipple label={handleFontChange(value === 4, "Get Involved")} component={Link} to="/getinvolved"/>
+                            {/* <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */} 
                             {/* CHANGE TO 5 later */}
                         </Tabs>
                     </div>

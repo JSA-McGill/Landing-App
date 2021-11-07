@@ -14,6 +14,8 @@ import RED from '@material-ui/core/colors/red';
 import Header from './header/Header';
 import Body from './body/Body';
 
+import { loadFont } from '../../mixins/font';
+
 import "./app.scss"
 
  const theme = createMuiTheme({
@@ -43,8 +45,14 @@ import "./app.scss"
   });
   
 
-export default function App () {
-    return (
+class App extends React.Component {
+
+    componentDidMount() {
+      loadFont();
+    }
+  
+    render() {
+      return (
         <ThemeProvider theme={theme}>
             <Router>
                 <div className={"app"} >
@@ -53,9 +61,10 @@ export default function App () {
                 </div>
             </Router>
         </ThemeProvider>
-    );
+      );
+    }
 }
 
 App.theme = theme;
 
-
+export default App;

@@ -93,6 +93,10 @@ export default function Exec(props) {
                                         {props.Program}
                                     </Typography>
 
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3" style={{fontStyle:"italic"}}>
+                                        {props.Year}
+                                    </Typography>
+
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
                                         {props.FavoriteFood}
                                     </Typography>

@@ -29,10 +29,10 @@ export default function Body (){
                     <Route exact path="/about">
                         <About/>
                     </Route>
-                    {/* 
+                    
                     <Route exact path="/resources">
                         <Resources/>
-                    </Route> */}
+                    </Route>
     {/*                 
                     <Route exact path="/blog">
                         <Blog/>

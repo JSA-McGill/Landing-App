@@ -1,0 +1,80 @@
+
+// Noto_Sans_JP
+@font-face {
+  font-family: 'NotoSans';
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Regular.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 100;
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Thin.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 300;
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 500;
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Medium.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 700;
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'NotoSans';
+  font-weight: 900;
+  src: local('NotoSans'), url(../fonts/Noto_Sans_JP/NotoSansJP-Black.otf) format('opentype');
+}
+
+
+// MPLUS1P
+@font-face {
+  font-family: 'M_PLUS_1p';
+  src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Regular.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'M_PLUS_1p';
+  font-weight: 100;
+  src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Thin.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'M_PLUS_1p';
+  font-weight: 300;
+  src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Light.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'M_PLUS_1p';
+  font-weight: 500;
+  src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Medium.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'M_PLUS_1p';
+    font-weight: 700;
+    src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'M_PLUS_1p';
+    font-weight: 800;
+    src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'M_PLUS_1p';
+  font-weight: 900;
+  src: local('M_PLUS_1p'), url(../fonts/M_PLUS_1p/MPLUS1p-Black.ttf) format('truetype');
+}

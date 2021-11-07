@@ -14,6 +14,8 @@ import Divider from '@material-ui/core/Divider';
 
 import ExchangeInJapan from "./exchange/ExchangeInJapan";
 import WorkingInJapan from "./working/WorkingInJapan";
+import LearningJapanese from "./learning/LearningJapanese";
+import CulturalActivities from "./activities/CulturalActivities";
 
 import "./resources.scss"
 
@@ -24,21 +26,48 @@ const useStyles = makeStyles((theme) => ({
         height: 1,
         width: "80vw"
     },
+    category: {
+        display: 'flex',
+        width: "100vw",
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    categoryBorder: {
+        borderColor: 'red',
+        borderWidth: '2px',
+    }
 }));
 
 
 export default function Resources() {
     const classes = useStyles();
     
+    const createCategory = (title, background) => {
+        return (
+            <div className={classes.category}>
+                {title}
+            </div>
+        )
+    }
+
     return (
         <div className="resources">
-            <ExchangeInJapan/>
+            <Fade in={true} timeout={1500}>
+                {createCategory("Exchange in Japan")}
+            </Fade>
             <Divider classes={{root: classes.divider}} />
-            <WorkingInJapan/>
+            <Fade in={true} timeout={2000}>
+                {createCategory("Working in Japan")}
+            </Fade>
             <Divider classes={{root: classes.divider}} />
-            Learning Japanese
+            <Fade in={true} timeout={2500}>
+                {createCategory("Learning Japanese")}
+            </Fade>
             <Divider classes={{root: classes.divider}} />
-            Japanese Cultural Activites in Montreal
+            <Fade in={true} timeout={3000}>
+                {createCategory("Japanese Cultural Activites in Montreal")}
+            </Fade>
         </div>
     );
 }
