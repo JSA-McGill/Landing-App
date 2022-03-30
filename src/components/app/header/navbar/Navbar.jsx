@@ -154,7 +154,7 @@ export default function Navbar(props) {
                             <Tab disabled indicator={{color:'transparent', backgroundColor: 'transparent'}} />
                             <Tab  disableRipple label={handleFontChange(value === 1, "About")}  to="/about" component={Link}/>
                             <Tab  disableRipple label={handleFontChange(value === 2, "Events")} component={Link} to="/events"/>
-                            <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/>
+                            {/* <Tab  disableRipple label={handleFontChange(value === 3, "Resources")} component={Link} to="/Resources"/> */}
                             <Tab  disableRipple label={handleFontChange(value === 4, "Get Involved")} component={Link} to="/getinvolved"/>
                             {/* <Tab  disableRipple label={handleFontChange(value === 4, "Blog")} component={Link} to="/blog"/> */} 
                             {/* CHANGE TO 5 later */}
