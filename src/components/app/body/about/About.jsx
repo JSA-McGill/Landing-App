@@ -50,11 +50,12 @@ export default function About(){
                                     FirstName={exec.FirstName}
                                     LastName={exec.LastName}
                                     Title={exec.Title}
-                                    Program={exec.Program}
                                     Year={exec.Year}
-                                    FavoriteFood={exec.FavoriteFood}
-                                    Pet={exec.Pet}
-                                    Instagram={exec.Instagram}
+                                    Major={exec.Major}
+                                    Hometown={exec.Hometown}
+                                    Hobbies={exec.Hobbies}
+                                    Song={exec.Song}
+                                    Restaurant={exec.Restaurant}
                                 >
                                 </Exec>
                             ))}
