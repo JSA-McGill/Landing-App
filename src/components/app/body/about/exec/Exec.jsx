@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     root: {
         color: theme.palette.secondary.main,
         backgroundColor: theme.palette.primary.main,
-        height: 400
+        height: 450
     },
     media: {
       height: 300,
@@ -91,32 +91,31 @@ export default function Exec(props) {
                                 :
                                 <>
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h5" style={{fontStyle:"italic"}}>
-                                        {"Program : " + props.Program}
-                                    </Typography>
-
-                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3" style={{fontStyle:"italic"}}>
                                         {"Year : " + props.Year}
                                     </Typography>
 
-                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {"Time in Japan : " + props.TimeSpentInJapan}
+                                    <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3" style={{fontStyle:"italic"}}>
+                                        {props.Major}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {"Favorite..."}
+                                        {"From " + props.Hometown}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {"Food : " + props.FavoriteFood}
+                                        {"Hobbies : " + props.Hobbies}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {"Pet : " + props.Pet}
+                                        {"Favorite Song : "}
+                                        {props.Song}
                                     </Typography>
 
                                     <Typography classes={{root: classes.flexObject}} gutterBottom variant="h6" component="h3">
-                                        {"Part about Japan : " + props.FavoritePartAboutJapan}
+                                        {"Favorite Japanese restaurant: "}
+                                        {props.Restaurant}
                                     </Typography>
+
 
                                     
                                     { props.Instagram ?
